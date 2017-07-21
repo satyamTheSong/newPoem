@@ -15,7 +15,7 @@ app.get('/', function(req, res){
 app.post('/listPoems', function (req, res) {
     console.log(">>>>>>>> "+JSON.stringify(req.body));
   filteredArray = [];
-   fs.readFile( "/Users/mac358813/Desktop/TypeScript/Node/poemList.json", 'utf8', function (err, data) {
+   fs.readFile( "poemList.json", 'utf8', function (err, data) {
        //console.log( data );
        data = JSON.parse(data);
        if(req.body.name.length>0){
@@ -40,7 +40,7 @@ app.post('/listPoems', function (req, res) {
 app.post('/updateFavorite', function (req, res) {
     console.log(">>>>>>>> "+JSON.stringify(req.body));
     filteredArray = [];
-    fs.readFile( "/Users/mac358813/Desktop/TypeScript/Node/poemList.json", 'utf8', function (err, data) {
+    fs.readFile( "poemList.json", 'utf8', function (err, data) {
        //console.log( data );
        data = JSON.parse(data);
        for(var i=0 ; i<data.poems.length; i++){
@@ -50,7 +50,7 @@ app.post('/updateFavorite', function (req, res) {
             filteredArray.push(data.poems[i]);
        }
        data.poems = filteredArray;
-       fs.writeFile( "/Users/mac358813/Desktop/TypeScript/Node/poemList.json", JSON.stringify(data, null, "\t"), 'utf8', function (err) {
+       fs.writeFile( "poemList.json", JSON.stringify(data, null, "\t"), 'utf8', function (err) {
            var errorCode, errorMessage;
             if (err){ 
                 errorCode = 100;
@@ -73,7 +73,7 @@ app.post('/updateFavorite', function (req, res) {
 })
 app.post('/getPoemDetails', function (req, res) {
     console.log(">>>>>>>> "+JSON.stringify(req.body));
-   fs.readFile( "/Users/mac358813/Desktop/TypeScript/Node/poemList.json", 'utf8', function (err, data) {
+   fs.readFile( "poemList.json", 'utf8', function (err, data) {
        //console.log( data );
        var result ={
            "index":"",

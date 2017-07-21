@@ -9,6 +9,9 @@ app.use(bodyParser.json({ extended: false }));
 app.use(cors());
 console.log (__dirname + '/poemAppAssest');
 app.use(express.static(__dirname + '/poemAppAssest'));
+app.get('/', function(req, res){
+    res.end("Heroku");
+})
 app.post('/listPoems', function (req, res) {
     console.log(">>>>>>>> "+JSON.stringify(req.body));
   filteredArray = [];

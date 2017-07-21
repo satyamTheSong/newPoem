@@ -1,0 +1,64 @@
+{
+	"poems": [
+		{
+			"poemName": "The Road Not Taken",
+			"poemFace": "Two roads diverged in a yellow wood,",
+			"poemIndex": "1",
+			"poemImage": "Lifetitle.jpg",
+			"poemCategory": "life",
+			"poemAuthor": "Robert Frost",
+			"isFavorite": false,
+			"poemDetail": "Two roads diverged in a yellow wood,<br>And sorry I could not travel both<br>And be one traveler, long I stood<br>And looked down one as far as I could<br>To where it bent in the undergrowth;<br><br>Then took the other, as just as fair,<br>And having perhaps the better claim,<br>Because it was grassy and wanted wear;<br>Though as for that the passing there<br>Had worn them really about the same,<br><br>And both that morning equally lay<br>In leaves no step had trodden black.<br>Oh, I kept the first for another day!<br>Yet knowing how way leads on to way,<br>I doubted if I should ever come back.<br><br>I shall be telling this with a sigh<br>Somewhere ages and ages hence:<br>Two roads diverged in a wood, and I—<br>I took the one less traveled by,<br>And that has made all the difference."
+		},
+		{
+			"poemName": "The Rains of Castamere",
+			"poemFace": "And who are you, the proud lord said, that I must bow so low? ",
+			"poemIndex": "2",
+			"poemImage": "castamere.jpg",
+			"poemCategory": "got",
+			"poemAuthor": "George R.R Martin",
+			"isFavorite": false,
+			"poemDetail": "And who are you, <br>the proud lord said, <br>that I must bow so low? <br>Only a cat of a different coat, <br>that's all the truth I know. <br>In a coat of gold or a coat of red,<br>a lion still has claws, <br>And mine are long and sharp, my lord, <br>as long and sharp as yours. <br>And so he spoke, and so he spoke, <br>that lord of Castamere, <br>But now the rains weep o'er his hall, <br>with no one there to hear. <br>Yes now the rains weep o'er his hall, <br>and not a soul to hear.<br>"
+		},
+		{
+			"poemName": "A Book of Music",
+			"poemFace": "Coming at an end, the lovers Are exhausted like two swimmers.",
+			"poemIndex": "3",
+			"poemImage": "bookOfMusic.jpg",
+			"poemCategory": "music",
+			"poemAuthor": "Jack Spider",
+			"isFavorite": true,
+			"poemDetail": "Coming at an end, the lovers<br>Are exhausted like two swimmers.  Where<br>Did it end?  There is no telling.  No love is<br>Like an ocean with the dizzy procession of the waves’ boundaries<br>From which two can emerge exhausted, nor long goodbye<br>Like death.<br>Coming at an end.  Rather, I would say, like a length<br>Of coiled rope<br>Which does not disguise in the final twists of its lengths<br>Its endings.<br>But, you will say, we loved<br>And some parts of us loved<br>And the rest of us will remain<br>Two persons.  Yes,<br>Poetry ends like a rope.<br>"
+		},
+		{
+			"poemName": "In Thy Nature",
+			"poemFace": "In thy nature is beauty, in thy nature is earth in thy nature",
+			"poemIndex": "4",
+			"poemImage": "thyNature.jpg",
+			"poemCategory": "people",
+			"poemAuthor": "STEPHANIE MCGRATH",
+			"isFavorite": true,
+			"poemDetail": "In thy nature is beauty<br>in thy nature is earth<br>in thy nature i find my worth<br><br>in thy nature is peace<br>in thy nature i find myself<br>in thy nature every lasting greens<br><br>in thy nature there is more to be seen<br>in thy nature a beauty untold<br>in thy nature everything is worth more than gold.<br>"
+		},
+		{
+			"poemName": "Mother Nature",
+			"poemFace": "Often I marvel at Mother Nature And its unique adventures",
+			"poemIndex": "5",
+			"poemImage": "motherNature.jpg",
+			"poemCategory": "nature",
+			"poemAuthor": "Sylvia Chidi",
+			"isFavorite": false,
+			"poemDetail": "Often I marvel at Mother Nature<br>And its unique adventures<br>It has in stock for us<br>I have to say Mother Nature is the boss<br>Everyone has DNA-like life experience<br>Sometimes it can be monotonously intense<br><br>But Mother Nature is supreme<br>And Mother Nature is extreme<br><br>Often I ponder on why Mother Nature<br>Is sporadically insane with jealousy<br>Committing many a time unspeakable atrocities<br><br>Tornados, earthquakes and volcanic eruptions<br>It showers, making its necessary modifications<br>Tidal waves are its trademark of destruction<br>Of natural and artificial creations <br><br>But Mother Nature always makes up<br>With multiplication and replication of the living! <br>"
+		},
+		{
+			"poemName": "Full of life",
+			"poemFace": "FULL of life, now, compact, visible, I, forty years",
+			"poemIndex": "6",
+			"poemImage": "fullOfLife.jpg",
+			"poemCategory": "life",
+			"poemAuthor": "Walt Whitman",
+			"isFavorite": false,
+			"poemDetail": "FULL of life, now, compact, visible,<br>I, forty years old the Eighty-third Year of The States,<br>To one a century hence, or any number of centuries hence,<br>To you, yet unborn, these, seeking you.<br><br>When you read these, I, that was visible, am become invisible;<br>Now it is you, compact, visible, realizing my poems, seeking me;<br>Fancying how happy you were, if I could be with you, and become your comrade;<br>Be it as if I were with you. (Be not too certain but I am now withyou.) <br>"
+		}
+	]
+}

@@ -1,0 +1,27 @@
+[
+  {
+    "id" : "1",
+    "username" : "starks",
+    "password":"starks"
+  },
+  {
+    "id" : "2",
+    "username" : "lannisters",
+    "password":"lannisters"
+  },
+  {
+    "id" : "3",
+    "username" :"targaryen",
+    "password":"targaryen"
+  }, 
+  {
+    "id" : "4",
+    "username" :"nightwatch",
+    "password" :"nightwatch"
+  },
+  {
+    "id" : "5",
+    "username" :"individual",
+    "password" :"individual"
+  } 
+]

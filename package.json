@@ -1,0 +1,26 @@
+{
+  "name": "nodeapp",
+  "config" : { "port" : "8080" },
+  "version": "1.0.0",
+  "description": "This is App for poem",
+  "main": "listUsers.js",
+  "dependencies": {
+    "cors": "^2.8.4",
+    "express": "^4.15.3",
+    "mongodb": "^2.2.29"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start" : "node listUsers.js"
+  },
+  "keywords": [
+    "example",
+    "heroku"
+  ],
+  "author": "satyam jain",
+  "license": "ISC",
+  "engines": {
+    "node": "4.1.1"
+  }
+}

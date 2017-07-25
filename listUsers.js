@@ -116,6 +116,33 @@ app.post('/getPoemDetails', function (req, res) {
             }, 1500);
    });
 })
+app.post('/addPoem', function (req, res) {
+    console.log(">>>>>>>> "+JSON.stringify(req.body));
+    filteredArray = [];
+    fs.readFile( "poemList.json", 'utf8', function (err, data) {
+       data = JSON.parse(data);
+       data.poems.push(req.body);
+       fs.writeFile( "poemList.json", JSON.stringify(data, null, "\t"), 'utf8', function (err) {
+           var errorCode, errorMessage;
+            if (err){ 
+                errorCode = 100;
+                errorMessage = "Something went wrong";
+                return console.log(err);
+            }else{
+                errorCode = 0;
+                errorMessage = "Data updated succefully";
+            }
+            var response = {"result":{
+                "code":errorCode,
+                "errorMessage": errorMessage
+            }};
+            setTimeout(function() {
+                res.end(JSON.stringify(response));
+            }, 1500);
+       });
+   });
+   
+})
 var server = app.listen(process.env.PORT || 8081, '0.0.0.0', function () {
 
   var host = server.address().address

@@ -46,7 +46,7 @@ app.post('/listPoems', function (req, res) {
 app.post('/getFavorites', function (req, res) {
     console.log(">>>>>>>> "+JSON.stringify(req.body));
   filteredArray = [];
-   fs.readFile( "/Users/mac358813/Desktop/TypeScript/Node/poemList.json", 'utf8', function (err, data) {
+   fs.readFile( "poemList.json", 'utf8', function (err, data) {
        //console.log( data );
        data = JSON.parse(data);
             for(var i=0; i<data.poems.length; i++){

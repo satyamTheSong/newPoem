@@ -5,8 +5,14 @@ var fs = require("fs");
 var filteredArray;
 var bodyParser = require('body-parser');
 // parse application/x-www-form-urlencoded 
-app.use(bodyParser.json({ extended: false }));
+// app.use(bodyParser.json({ extended: false }));
 app.use(cors());
+app.use( bodyParser.json({limit: '50mb'}) );
+app.use(bodyParser.urlencoded({
+  extended: false,
+  parameterLimit:500000
+}));
+app.use(bodyParser());
 console.log (__dirname + '/poemAppAssest');
 app.use(express.static(__dirname + '/poemAppAssest'));
 app.get('/', function(req, res){

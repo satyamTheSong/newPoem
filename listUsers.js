@@ -143,6 +143,36 @@ app.post('/addPoem', function (req, res) {
    });
    
 })
+app.post('/deletePoem', function (req, res) {
+    console.log(">>>>>>>> "+JSON.stringify(req.body));
+    filteredArray = [];
+    fs.readFile( "poemList.json", 'utf8', function (err, data) {
+       //console.log( data );
+       data = JSON.parse(data);
+       // filteredArray.push(data.poems[i]);
+       filteredArray = data.poems.filter((item) => item.poemIndex !== req.body.index);
+       data.poems = filteredArray;
+       fs.writeFile( "poemList.json", JSON.stringify(data, null, "\t"), 'utf8', function (err) {
+           var errorCode, errorMessage;
+            if (err){ 
+                errorCode = 100;
+                errorMessage = "Something went wrong";
+                return console.log(err);
+            }else{
+                errorCode = 0;
+                errorMessage = "Poem Deleted succefully";
+            }
+            var response = {"result":{
+                "code":errorCode,
+                "errorMessage": errorMessage
+            }};
+            setTimeout(function() {
+                res.end(JSON.stringify(response));
+            }, 1500);
+       });
+   });
+   
+})
 var server = app.listen(process.env.PORT || 8081, '0.0.0.0', function () {
 
   var host = server.address().address

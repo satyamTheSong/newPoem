@@ -116,7 +116,7 @@ app.post('/getPoemDetails', function (req, res) {
             }, 1500);
    });
 })
-app.post('/addPoem',express.bodyParser({limit:'100mb'}), function (req, res) {
+app.post('/addPoem', function (req, res) {
     console.log(">>>>>>>> "+JSON.stringify(req.body));
     filteredArray = [];
     fs.readFile( "poemList.json", 'utf8', function (err, data) {

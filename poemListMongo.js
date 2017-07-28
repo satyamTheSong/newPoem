@@ -225,7 +225,7 @@ app.post('/addPoem', function (req, res) {
     console.log(">>>>>>>> " + JSON.stringify(req.body));
    // MongoClient.connect(url, function (err, db) {
         //assert.equal(null, err);
-        addNewPoem(db, req, function (response) {
+        addNewPoem(mongodb, req, function (response) {
             setTimeout(function () {
                 res.end(JSON.stringify(response));
             }, 1500);
@@ -237,7 +237,7 @@ app.post('/deletePoem', function (req, res) {
     console.log(">>>>>>>> " + JSON.stringify(req.body));
     //MongoClient.connect(url, function (err, db) {
         //assert.equal(null, err);
-        deletePoem(db, req, function (response) {
+        deletePoem(mongodb, req, function (response) {
             setTimeout(function () {
                 res.end(JSON.stringify(response));
             }, 1500);

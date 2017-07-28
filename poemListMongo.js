@@ -10,16 +10,14 @@ var MongoClient = require('mongodb').MongoClient;
 var assert = require('assert');
 var ObjectId = require('mongodb').ObjectID;
 var url = 'mongodb://satyamPoem:27051990@ds125183.mlab.com:25183/poemdb';
+var mongodb = '';
 
-// MongoClient.connect(url, function (err, db) {
-//     console.log(db);
-//     console.log(err);
-//         //assert.equal(null, err);
-//         // getFavoritePoems(db, req, function (filteredArray) {
-//         //     var response = { "response": filteredArray };
-//         //     res.end(JSON.stringify(response));
-//         //     db.close();
-//         });
+// Create the db connection
+MongoClient.connect(url, { poolSize: 10},function(err, db) {  
+    assert.equal(null, err);
+    mongodb=db;
+    }
+);
 //Get All poems for DB
 var findPoems = function (db, req, callback) {
     filteredArray = [];
@@ -179,72 +177,72 @@ console.log(__dirname + '/poemAppAssest');
 app.use(express.static(__dirname + '/poemAppAssest'));
 app.post('/listPoems', function (req, res) {
     console.log(">>>>>>>> " + JSON.stringify(req.body));
-    MongoClient.connect(url, function (err, db) {
-        assert.equal(null, err);
-        findPoems(db, req, function (filteredArray) {
+    //MongoClient.connect(url, function (err, db) {
+      //  assert.equal(null, err);
+        findPoems(mongodb, req, function (filteredArray) {
             var response = { "response": filteredArray };
             res.end(JSON.stringify(response));
-            db.close();
+            //db.close();
         });
-    });
+    //});
 })
 app.post('/getFavorites', function (req, res) {
     console.log(">>>>>>>> " + JSON.stringify(req.body));
-    MongoClient.connect(url, function (err, db) {
-        assert.equal(null, err);
-        getFavoritePoems(db, req, function (filteredArray) {
+   // MongoClient.connect(url, function (err, db) {
+     //   assert.equal(null, err);
+        getFavoritePoems(mongodb, req, function (filteredArray) {
             var response = { "response": filteredArray };
             res.end(JSON.stringify(response));
-            db.close();
+            //db.close();
         });
-    });
+    //});
 })
 app.post('/updateFavorite', function (req, res) {
     console.log(">>>>>>>> " + JSON.stringify(req.body));
-    MongoClient.connect(url, function (err, db) {
-        assert.equal(null, err);
-        updateFavorite(db, req, function (response) {
+    //MongoClient.connect(url, function (err, db) {
+      //  assert.equal(null, err);
+        updateFavorite(mongodb, req, function (response) {
             setTimeout(function () {
                 res.end(JSON.stringify(response));
             }, 1500);
-            db.close();
+            //db.close();
         });
-    });
+    //});
 })
 app.post('/getPoemDetails', function (req, res) {
     console.log(">>>>>>>> " + JSON.stringify(req.body));
-    MongoClient.connect(url, function (err, db) {
-        assert.equal(null, err);
-        getPoemDeatils(db, req, function (response) {
+    //MongoClient.connect(url, function (err, db) {
+        //assert.equal(null, err);
+        getPoemDeatils(mongodb, req, function (response) {
             setTimeout(function () {
                 res.end(JSON.stringify(response));
             }, 1500);
-            db.close();
-        });
+            //db.close();
+        //});
     });
 })
 app.post('/addPoem', function (req, res) {
     console.log(">>>>>>>> " + JSON.stringify(req.body));
-    MongoClient.connect(url, function (err, db) {
-        assert.equal(null, err);
+   // MongoClient.connect(url, function (err, db) {
+        //assert.equal(null, err);
         addNewPoem(db, req, function (response) {
             setTimeout(function () {
                 res.end(JSON.stringify(response));
             }, 1500);
-            db.close();
-        });
+            //db.close();
+        //});
     });
 })
 app.post('/deletePoem', function (req, res) {
     console.log(">>>>>>>> " + JSON.stringify(req.body));
-    MongoClient.connect(url, function (err, db) {
-        assert.equal(null, err);
+    //MongoClient.connect(url, function (err, db) {
+        //assert.equal(null, err);
         deletePoem(db, req, function (response) {
             setTimeout(function () {
                 res.end(JSON.stringify(response));
             }, 1500);
-            db.close();
-        });
+            //db.close();
+        //});
     });
 })
 var server = app.listen(process.env.PORT || 8081, '0.0.0.0', function () {
